@@ -71,18 +71,18 @@ ir기법이란 image replacement의 약자로서, 이미지를 볼 수 없는 �
 img요소의 alt속성과 같은 역할을 하는 것인데요. ir기법은 img요소가 아닌 css의 background-image 속성으로 이미지를 제공할때 사용하는 기법입니다.<br><br>
 ir기법에 대해 설명하기 위해서 이것저것 찾아보다가 좋은 예시를 발견했는데요.<br> 바로 네이버 메인화면에 있는 검색창의 검색버튼입니다.<br><br>
 
-![네이버 검색버튼 이미지](https://github.com/heymrchu0211/interview/blob/main/search-bar-image-naver.png)
-![네이버 코드 이미지](https://github.com/heymrchu0211/interview/blob/main/ir-code-image-naver.png)
+![네이버 검색버튼 이미지](https://github.com/heymrchu0211/interview/blob/main/search-bar-naver.png)
+![네이버 html 이미지](https://github.com/heymrchu0211/interview/blob/main/ir-html-naver.png)
 
 위 이미지를 보시면 button요소가 있고 그의 자식으로 class명이 ico_search_submit인 span요소와 class명이 blind인 span요소가 있는데요.
-class명이 ico_search_submit인 span요소의 css를 보면 아래 이미지처럼 background-image가 적용되어 있는 걸 보실 수 있습니다.<br><br>
+class명이 ico_search_submit인 span요소의 css를 보면 아래 이미지처럼 background-image가 적용되어 있는 걸 보실 수 있습니다.
 
-![네이버 background-image css 이미지](https://github.com/heymrchu0211/interview/blob/main/ir-code-image-naver.png)
+![네이버 background-image css 이미지](https://github.com/heymrchu0211/interview/blob/main/ir-css-bg-naver.png)
 
 그리고 class명이 blind라고 되어있는 span요소를 보시게 되면
-“검색”이라는 텍스트가 들어가있고 css는 아래 이미지와 같이 적용 되어 있습니다.<br><br>
+“검색”이라는 텍스트가 들어가있고 css는 아래 이미지와 같이 적용 되어 있습니다.
 
-![네이버 background-image css 이미지](https://github.com/heymrchu0211/interview/blob/main/ir-code-image-naver.png)
+![네이버 background-image css 이미지](https://github.com/heymrchu0211/interview/blob/main/ir-css-blind-naver.png)
 
 이렇게 되면 화면에는 “검색”이라는 텍스트가 보이지는 않지만 화면낭독기 등의 보조기기에는 읽히게 됩니다. 
 즉, ir기법은 웹접근성 준수를 위해 사용하는 것입니다.
