@@ -1,7 +1,7 @@
 ## 예상 면접 질문 - 자문자답
 
-이 문서는 제가 만약 면접을 보게 된다면 받게 될 질문들을<br>
-스스로 예상해보고 그에 대한 답변을 한 글입니다.
+이 문서는 제가 만약 면접을 보게 된다면 받게 될 질문들을
+스스로 예상해보고 그에 대한 답변을 한 글입니다.<br>
 자문자답 형식으로 작성해 보았습니다.
 
 <br>
@@ -69,9 +69,10 @@ display: none : 화면에 보이지도 않고 이벤트도 적용 안되고 tab�
 
 ir기법이란 image replacement의 약자로서, 이미지를 볼 수 없는 사용자(화면낭독기 등의 보조기기 사용자)를 위해 이미지에 대한 대체 텍스트를 제공하는 것을 말합니다.<br> 
 img요소의 alt속성과 같은 역할을 하는 것인데요. ir기법은 img요소가 아닌 css의 background-image 속성으로 이미지를 제공할때 사용하는 기법입니다.<br><br>
-ir기법에 대해 설명하기 위해서 이것저것 찾아보다가 좋은 예시를 발견했는데요. 바로 네이버 메인화면에 있는 검색창의 검색버튼입니다.<br><br>
+ir기법에 대해 설명하기 위해서 이것저것 찾아보다가 좋은 예시를 발견했는데요.<br> 바로 네이버 메인화면에 있는 검색창의 검색버튼입니다.<br><br>
 
 ![네이버 코드 이미지](https://github.com/heymrchu0211/interview/blob/main/ir-code-image-naver.png)
+![네이버 코드 이미지](https://github.com/heymrchu0211/interview/blob/main/ir-code-image-naver.png "네이버 코드 이미지")
 
 위 이미지를 보시면 button요소가 있고 그의 자식으로 class명이 ico_search_submit인 span요소와 class명이 blind인 span요소가 있는데요.
 class명이 ico_search_submit인 span요소의 css를 보면 아래 이미지처럼 background-image가 적용되어 있는 걸 보실 수 있습니다.<br><br>
