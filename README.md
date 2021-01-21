@@ -9,14 +9,14 @@
 
 ## position relative와 absolute의 차이점이 뭔가요?
 
->position속성의 값이 relative인 요소는 자기 자신이 문서 흐름상 위치해야 할 위치를 기준으로 합니다. 자기 자신을 기준으로 하기 때문에 left,top,right,bottom등의 속성을 사용하면 자기 자신의 위치를 기준으로 움직입니다. 부모중에 relative,absolute,fixed인 요소가 있어도 여전히 자기 자신을 기준으로 합니다.<br><br>
+position속성의 값이 relative인 요소는 자기 자신이 문서 흐름상 위치해야 할 위치를 기준으로 합니다. 자기 자신을 기준으로 하기 때문에 left,top,right,bottom등의 속성을 사용하면 자기 자신의 위치를 기준으로 움직입니다. 부모중에 relative,absolute,fixed인 요소가 있어도 여전히 자기 자신을 기준으로 합니다.<br><br>
 반면 position속성의 값이 absolute인 요소는 부모 요소중에 relative,absolute,fixed인 요소가 있으면 그 요소를 기준점으로 합니다.
 부모중에 relative,absolute,fixed인 요소가 존재하지 않는다면 브라우저의 viewport를 기준으로 합니다. viewport란 화면에 보이는 영역을 말합니다.<br><br>
 만약 요소가 div,p등의 block level 요소라고 할지라도  position속성의 값이 absolute가 되는 순간 그 요소는 더 이상 너비를 100% 차지하지 않고 마치 inline-block처럼 됩니다. 즉, 해당 요소가 갖고 있는 컨텐츠의  영역만큼 너비가 지정됩니다. 그래서 너비를 100%로 주고 싶다면 width속성의 값을 100%로 따로 지정 해야 합니다.
 
 ## rem과 em의 차이점이 뭔가요?
 
->먼저 rem은 html의 font-size를 기준으로 합니다. 예를 들어 html의 font-size가 20px이라고 가정한 상태에서 body요소의 font-size를 2rem으로 적용하게 되면 body요소의 font-size는 40px이 됩니다. 왜냐하면 기준이 되는 html요소의 font-size 20px 곱하기 2 = 40px이기 때문입니다. rem은 언제나 html을 기준으로 합니다.<br><br>
+먼저 rem은 html의 font-size를 기준으로 합니다. 예를 들어 html의 font-size가 20px이라고 가정한 상태에서 body요소의 font-size를 2rem으로 적용하게 되면 body요소의 font-size는 40px이 됩니다. 왜냐하면 기준이 되는 html요소의 font-size 20px 곱하기 2 = 40px이기 때문입니다. rem은 언제나 html을 기준으로 합니다.<br><br>
 em은 가까운 부모 요소의 font-size를 기준으로 합니다. 예를 들어서 어떤 div요소가 있고 그의 자식으로 span요소가 있는 상황에서, div요소의 font-size가 20px이고 span요소의 font-size를 1em으로 적용하면 span요소의 font-size는 20px이 됩니다. 왜냐하면 부모인 div요소의 font-size가 기준이 되기 때문입니다.<br><br>
 만약에 자신의 직계부모에 font-size가 따로 지정되어 있지 않은 경우에는 그의 부모인 조부모가 기준이 됩니다. 조부모에도 font-size가 따로 지정되어 있지 않으면 계속 부모를 타고타고 찾아 올라가다가 결국에는 html이 기준이 될 수도 있습니다. <br><br>
 그런데 em은 꼭 상위요소만을 기준으로 하지 않습니다. 예를 들어서 어떤 div요소가 있고 그  div 요소의 font-size가 20px인 상황에서
@@ -24,7 +24,7 @@ em은 가까운 부모 요소의 font-size를 기준으로 합니다. 예를 들
 
 ## opacity: 0, visibility: hidden, display:none의 차이점이 뭔가요?
 
->opacity 0 : 화면에서는 보이지 않지만 여전히 공간을 차지하고 있습니다. 이벤트 적용이 가능하며 tab키를 눌렀을때 해당 요소로 접근이 가능합니다.<br><br>
+opacity 0 : 화면에서는 보이지 않지만 여전히 공간을 차지하고 있습니다. 이벤트 적용이 가능하며 tab키를 눌렀을때 해당 요소로 접근이 가능합니다.<br><br>
 visibility: hidden : 화면에서는 보이지 않지만 여전히 공간을 차지하고 있습니다. 하지만 이벤트가 적용 되지 않으며 tab키를 눌렀을때 해당 요소로 접근이 불가능합니다.<br><br>
 display: none : 화면에 보이지도 않고 이벤트도 적용 안되고 tab키로 진입도 할 수 없습니다.
 
@@ -37,7 +37,7 @@ display: none : 화면에 보이지도 않고 이벤트도 적용 안되고 tab�
   <span class="children">김춘영1</span><span class="children">김춘영2</span><span class="children">김춘영3</span><span class="children">김춘영4</span>
 </div>
 ```
-첫번째 방법은 html상에서 요소들을 위와 같이 개행을 하지 않고 서로 붙여 놓는 것입니다. 하지만 이렇게 하면 가독성이 너무 떨어지기 때문에 실제로 이 방법을 쓰는건 적절한 방법이 아니라고 생각합니다.<br><br>
+첫번째 방법은 위와 같이 html상에서 요소들을 개행 시키지 않고 서로 붙여 놓는 것입니다. 하지만 이렇게 하면 가독성이 너무 떨어지기 때문에 실제로 이 방법을 쓰는건 적절한 방법이 아니라고 생각합니다.<br><br>
 ```html
 <div class="parent">
   <span class="children">김춘영1</span>
@@ -86,3 +86,12 @@ class명이 ico_search_submit인 span요소의 css를 보면 아래 이미지처
 
 이렇게 되면 화면에는 “검색”이라는 텍스트가 보이지는 않지만 화면낭독기 등의 보조기기에는 읽히게 됩니다. 
 즉, ir기법은 웹접근성 준수를 위해 사용하는 것입니다.
+
+## 스프라이트 이미지가 뭔가요?
+
+스프라이트 이미지라는 것은 사용할 이미지들을 각각 개별적인 파일로 관리하지 않고 하나의 파일로 한데 모아서 관리하는 것을 말합니다. 좀 전에 ir기법에 대해 설명할때 네이버를 예로 들었는데요.
+아래 보시는 이미지가 네이버 메인화면에서 쓰이고 있는 스프라이트 이미지 입니다.
+
+![네이버 background-image css 이미지](https://github.com/heymrchu0211/interview/blob/sprite-image-naver.png)
+스프라이트 이미지를 사용하는 이유는,
+웹브라우저가 서버에 이미지를 요청할 때 요청해야 할 이미지가 많으면 많을수록 그만큼 웹페이지의 로딩 속도가 느려지게 되는데 스프라이트 이미지를 사용하게 되면 요청해야 하는 이미지를 줄여주어 이를 최소화 할 수 있기 때문입니다.
