@@ -9,7 +9,7 @@
 
 ## position relative와 absolute의 차이점이 뭔가요?
 
-position속성의 값이 relative인 요소는 자기 자신이 문서 흐름상 위치해야 할 위치를 기준으로 합니다. 자기 자신을 기준으로 하기 때문에 left,top,right,bottom등의 속성을 사용하면 자기 자신의 위치를 기준으로 움직입니다. 부모중에 relative,absolute,fixed인 요소가 있어도 여전히 자기 자신을 기준으로 합니다.<br><br>
+position속성의 값이 relative인 요소는 자기 자신이 문서 흐름상 위치해야 할 위치를 기준으로 합니다. 자기 자신을 기준으로 하기 때문에 left,top,right,bottom등의 속성을 적용하면 자기 자신의 위치를 기준으로 움직입니다. 부모중에 relative,absolute,fixed인 요소가 있어도 여전히 자기 자신을 기준으로 합니다.<br><br>
 반면 position속성의 값이 absolute인 요소는 부모 요소중에 relative,absolute,fixed인 요소가 있으면 그 요소를 기준점으로 합니다.
 부모중에 relative,absolute,fixed인 요소가 존재하지 않는다면 브라우저의 viewport를 기준으로 합니다. viewport란 화면에 보이는 영역을 말합니다.<br><br>
 만약 요소가 div,p등의 block level 요소라고 할지라도  position속성의 값이 absolute가 되는 순간 그 요소는 더 이상 너비를 100% 차지하지 않고 마치 inline-block처럼 됩니다. 즉, 해당 요소가 갖고 있는 컨텐츠의  영역만큼 너비가 지정됩니다. 그래서 너비를 100%로 주고 싶다면 width속성의 값을 100%로 따로 지정 해야 합니다.
@@ -51,7 +51,7 @@ display: none : 화면에 보이지도 않고 이벤트도 적용 안되고 tab�
   margin-right: -6px;
 }
 ```
-두번째 방법은 위와 같이 inline 혹은 inline-block 요소들의 margin을 음수값으로 적용 하는 것입니다. (네거티브 마진 이라고 불립니다 )  margin-right: -6px 라고 적용하게 되면오른쪽 마진은 -4px이라는 의미인데요. 이렇게 하면 요소들 사이의 간격을 없앨 수 있습니다. 하지만 정확히 말하면 없앤다기 보다는 강제로 간격을 줄인다 라고 말하는게 더 적절하다고 생각합니다.<br><br>
+두번째 방법은 위와 같이 inline 혹은 inline-block 요소들의 margin을 음수값으로 적용 하는 것입니다. (네거티브 마진 이라고 불립니다 )  margin-right: -6px 라고 적용하게 되면 오른쪽 마진은 -6px이라는 의미인데요. 이렇게 하면 요소들 사이의 간격을 없앨 수 있습니다. 없앤다기 보다는 강제로 간격을 줄인다 라고 말하는게 더 적절하다고 생각합니다.<br><br>
 
 ```css
 .parent {
@@ -98,12 +98,15 @@ class명이 ico_search_submit인 span요소의 css를 보면 아래 이미지처
 
 ## DOM이란 무엇인가요? 
 
-DOM이라는 것은 document object model(문서 객체 모델)의 약자인데 이건 한마디로 말해서 개발자도구의 element탭에 있는 그 html요소들이라고 할 수 있습니다.<br> 브라우저의 렌더링 엔진은 웹문서가 로드가 되면 모든 html요소와 그 요소들에 있는 속성,텍스트들을 모두 각각의 객체로 만들고<br> 
-이러한 객체들을 마치 나무(tree)의 뿌리와 가지같은 모습으로 구성하게 되는데 그것을 dom이라고 할 수 있습니다.
+DOM이라는 것은 document object model(문서 객체 모델)의 약자인데요.<br> 
+여기서 문서 객체라는 것은 <html>,<body>,<div>등의 html 요소들을 자바스크립트가 조작할 수 있는 객체(object)로 만들면 그것을 문서 객체라고 합니다.<br> 
+브라우저의 렌더링 엔진은 웹문서가 로드가 되면 모든 html요소와 그 요소들에 있는 속성,텍스트들을 모두 각각의 객체로 만들고<br> 
+이러한 객체들은 서로 부자관계로 연결이 되면서 그 모습이 마치 나무의 뿌리와 가지 그리고 이파리 같아서 tree구조라고 부릅니다.<br> 
+그것이 곧 dom이라고 할 수 있습니다.
 
 ## 자바스크립트를 로드할때 body요소 맨 아래에 위치시키는 이유가 뭔가요?
 
-웹브라우저가 html을 해석(parsing)하는 동안에 javascript 태그를 만나게 되면<br>  
+웹브라우저가 html을 해석(parsing)하는 동안에 javascript 태그를 만나게 되면
 그 javascript의 코드들을 처리할때까지 html 해석(parsing)을 멈추기 때문에<br> 웹페이지가 화면에 다 그려지기까지 더 오래걸리게 되고<br>
 또한 dom이 생성되기 전에 dom을 조작하려고 하면 에러가 나기 때문입니다.
 
